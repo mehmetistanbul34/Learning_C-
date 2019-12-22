@@ -5,7 +5,12 @@ class Metotlar{
 		string kelime="";
 		for(int i=0;i<word.Length;i++){
 			int wordInt = Convert.ToInt32(word[i]);
-			char wordUpper = (char)(wordInt-32);
+			char wordUpper=' ';
+			if(wordInt >= 97){
+				wordUpper = (char)(wordInt-32);
+			}else{
+				wordUpper = (char)(wordInt);
+			}
 			kelime += wordUpper;
 		}
 		Console.WriteLine(kelime);
